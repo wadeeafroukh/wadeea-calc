@@ -1,46 +1,118 @@
-# Getting Started with Create React App
+# 💰 Wadeea Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack financial tracker that helps you manage your income, expenses, transfers, and debts — with both guest mode and authenticated user mode.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 👤 Guest Mode
+- Add / delete actions locally
+- Add / delete debts locally
+- Data stored temporarily in browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🔐 Member Mode
+- Register & Login (JWT Authentication)
+- Save actions & debts in database
+- Personal stats (weekly & monthly – upcoming)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 💸 Actions System
+- Income / Expense / Transfer / Debt Payment
+- Cash & Bank tracking
+- Smart balance calculation
 
-### `npm test`
+### 🧾 Debts System
+- Add debts
+- Track remaining amount
+- Auto-update when paying debts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
+- React + TypeScript
+- Bootstrap 5
+- Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- Joi Validation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+src/  ├── components/  ├── interface/  ├── service/  ├── App.tsx
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ⚙️ Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 1. Clone the project
+git clone YOUR_REPO_URL cd wadeea-calculator
 
-## Learn More
+### 2. Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Run frontend
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Run backend (separately)
+cd server npm install npm run dev
+
+---
+
+## 🔐 Environment Variables
+
+Create a .env file in the backend:
+
+PORT=8000 DB=your_mongodb_connection JWTKEY=your_secret_key
+
+⚠️ .env is not included in this repository.
+
+---
+
+## 🌐 API Endpoints
+
+### Users
+- POST /api/users → Register
+- POST /api/users/login → Login
+
+### Actions
+- CRUD operations (auth required)
+
+### Debts
+- CRUD operations (auth required)
+
+---
+
+## 📌 Notes
+
+- Guest mode works without backend
+- Member mode requires running backend
+- Validation handled with Joi
+- Passwords are hashed using bcrypt
+
+---
+
+## 🔥 Future Improvements
+
+- Stats page (charts & analytics)
+- Edit actions / debts
+- Better UI/UX design
+- Dark mode
+
+---
+
+## 👨‍💻 Author
+
+Wadeea Froukh
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ on Gi
